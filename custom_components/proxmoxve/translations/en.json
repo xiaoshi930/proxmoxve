@@ -1,0 +1,89 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "data": {
+                    "name": "Name",
+                    "host": "PVE Host",
+                    "port": "PVE Port",
+                    "username": "Username",
+                    "password": "Password",
+                    "verify_ssl": "Verify SSL"
+                },
+                "title": "Proxmox"
+            }
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data": {
+                    "verify_ssl": "Verify SSL"
+                },
+                "title": "Proxmox"
+            }
+        }
+    },
+    "entity": {
+        "button": {
+            "shutdown": {
+                "name": "Shutdown"
+            },
+            "reboot": {
+                "name": "Reboot"
+            },
+            "reset": {
+                "name": "Reset"
+            },
+            "suspend": {
+                "name": "Suspend"
+            }
+        },
+        "sensor": {
+            "cpu_usage": {
+                "name": "CPU Usage"
+            },
+            "mem_usage": {
+                "name": "Memory Usage"
+            },
+            "vm_cpu_usage": {
+                "name": "CPU Usage"
+            },
+            "vm_mem_usage": {
+                "name": "Memory Usage"
+            },
+            "disk_usage": {
+                "name": "Disk Usage"
+            },
+            "node_cpu_usage": {
+                "name": "Node CPU Usage"
+            },
+            "node_mem_usage": {
+                "name": "Node Memory Usage"
+            },
+            "netin": {
+                "name": "Upload"
+            },
+            "netout": {
+                "name": "Download"
+            },
+            "uptime": {
+                "name": "Uptime"
+            },
+            "cpu_temperature": {
+                "name": "CPU Temperature"
+            },
+            "motherboard_temperature": {
+                "name": "Motherboard Temperature"
+            },
+            "nvme_temperature": {
+                "name": "NVMe Temperature"
+            }
+        },
+        "switch": {
+            "vm_power": {
+                "name": "Power"
+            }
+        }
+    }
+}

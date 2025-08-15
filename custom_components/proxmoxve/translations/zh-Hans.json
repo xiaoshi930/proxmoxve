@@ -1,0 +1,93 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "data": {
+                    "name": "名称",
+                    "host": "PVE主机地址",
+                    "port": "PVE主机端口",
+                    "ssh_port": "SSH端口",
+                    "username": "用户名",
+                    "password": "密码",
+                    "verify_ssl": "校验SSL证书"
+                },
+                "title": "Proxmox"
+            }
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data": {
+                    "verify_ssl": "校验SSL证书"
+                },
+                "title": "Proxmox"
+            }
+        }
+    },
+    "entity": {
+        "button": {
+            "shutdown": {
+                "name": "关机"
+            },
+            "reboot": {
+                "name": "软重启"
+            },
+            "reset": {
+                "name": "硬重启"
+            },
+            "suspend": {
+                "name": "挂起"
+            }
+        },
+        "sensor": {
+            "cpu_usage": {
+                "name": "CPU使用率"
+            },
+            "mem_usage": {
+                "name": "内存使用率"
+            },
+            "vm_cpu_usage": {
+                "name": "额定CPU使用率"
+            },
+            "vm_mem_usage": {
+                "name": "额定内存使用率"
+            },
+            "disk_usage": {
+                "name": "存储使用率"
+            },
+            "node_cpu_usage": {
+                "name": "宿主机CPU使用率"
+            },
+            "node_mem_usage": {
+                "name": "宿主机内存使用率"
+            },
+            "netin": {
+                "name": "网络下行流量"
+            },
+            "netout": {
+                "name": "网络上行流量"
+            },
+            "uptime": {
+                "name": "开机时间"
+            },
+            "cpu_temperature": {
+                "name": "CPU温度"
+            },
+            "motherboard_temperature": {
+                "name": "主板温度"
+            },
+            "nvme_temperature": {
+                "name": "NVMe温度"
+            },
+            "disk_temperature": {
+                "name": "硬盘温度"
+            }
+        },
+        "switch": {
+            "vm_power": {
+                "name": "电源开关"
+            }
+        }
+    }
+}
