@@ -42,7 +42,7 @@ class PVEFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
             data_schema=vol.Schema(
                     {
                         vol.Required(CONF_NAME, default="PVE"): str,
-                        vol.Required(CONF_HOST, default="localhost"): str,
+                        vol.Required(CONF_HOST, default="192.168."): str,
                         vol.Required(CONF_PORT, default=8006): vol.Coerce(int),
                         vol.Optional(CONF_SSH_PORT, default=22): vol.Coerce(int),
                         vol.Required(CONF_USERNAME, default="root@pam"): str,
