@@ -3,7 +3,7 @@
   "name": "Proxmoxve",
   "documentation": "https://github.com/xiaoshi930/Proxmoxve",
   "requirements": ["proxmoxer>=2.0.1"],
-  "codeowners": ["@ryanh7"],
+  "codeowners": ["@xiaoshi930"],
   "config_flow": true,
   "iot_class": "local_polling",
   "loggers": ["proxmoxve"],
