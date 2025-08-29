@@ -412,7 +412,18 @@ class PVENodeSensor(PVENodeEntity, SensorEntity):
                 
             disk_info = self.coordinator.data.disks[self.disk_path]
             temperature = disk_info.get("temperature")
-            return temperature if temperature is not None else "未知"
+            
+            # 如果温度为None或"未知"，对于数值类型传感器返回None而不是字符串
+            if temperature is None or temperature == "未知":
+                _LOGGER.debug(f"Disk {self.disk_path} temperature is unknown, returning None instead of string")
+                return None
+            
+            # 尝试将温度转换为数值
+            try:
+                return float(temperature)
+            except (ValueError, TypeError):
+                _LOGGER.warning(f"Invalid temperature value for disk {self.disk_path}: {temperature}")
+                return None
         else:
             # 处理其他节点信息
             if data := self.coordinator.data.nodes.get(self.node, None):
