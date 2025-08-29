@@ -300,7 +300,7 @@ class PVEDataUpdateCoordinator(DataUpdateCoordinator):
                 stderr_output = stderr.read().decode("utf-8")
                 
                 if stderr_output:
-                    _LOGGER.warning(f"执行sensors命令时出错: {stderr_output}")
+                    _LOGGER.warning(f"执行sensors命令时出错: 请安装lm-sensors包以获取温度相关数据")
                 
                 if sensors_output:
                     _LOGGER.debug(f"获取到温度数据结果，开始处理")
