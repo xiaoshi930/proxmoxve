@@ -64,17 +64,17 @@ class PVEFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
 class OptionsFlowHandler(config_entries.OptionsFlow):
     def __init__(self, config_entry: config_entries.ConfigEntry) -> None:
         """Initialize options flow."""
-        self.config_entry = config_entry
+        self._config_entry = config_entry
         self.config = dict(config_entry.data)
 
     async def async_step_init(self, user_input=None):
 
         if user_input is not None:
             self.hass.config_entries.async_update_entry(
-                self.config_entry,
+                self._config_entry,
                 data=user_input
             )
-            await self.hass.config_entries.async_reload(self.config_entry.entry_id)
+            await self.hass.config_entries.async_reload(self._config_entry.entry_id)
             return self.async_create_entry(title="", data=user_input)
 
         return self.async_show_form(
